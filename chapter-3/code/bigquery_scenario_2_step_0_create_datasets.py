@@ -4,7 +4,7 @@ from google.cloud.exceptions import NotFound
 client = bigquery.Client()
 
 datasets_name = ['raw_bikesharing','dwh_bikesharing','dm_bikesharing']
-location = 'US'
+location = 'EU'
 
 def create_bigquery_dataset(dataset_name):
     """Create bigquery dataset. Check first if the dataset exists
