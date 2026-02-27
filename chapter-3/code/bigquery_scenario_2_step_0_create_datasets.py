@@ -12,6 +12,8 @@ def create_bigquery_dataset(dataset_name):
             dataset_name: String
     """
 
+    print("Project name: {}".format(client.project))
+
     dataset_id = "{}.{}".format(client.project, dataset_name)
     try:
         client.get_dataset(dataset_id)
@@ -24,4 +26,5 @@ def create_bigquery_dataset(dataset_name):
 
 
 for name in datasets_name:
+    print("Testing")
     create_bigquery_dataset(name)
